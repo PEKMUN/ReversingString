@@ -29,6 +29,18 @@ void test_getStringLength_given_mumbo_jumbo_string_expect_11(void)
     TEST_ASSERT_EQUAL(11, getStringLength("mumbo-jumbo"));
 }
 
+void test_ReversingString_given_ada_expect_ada(void)
+{	
+	char *str = ReversingString("ada");
+    TEST_ASSERT_EQUAL_STRING("ada", str);
+}
+
+void test_ReversingString_given_framework_expect_krowemarf(void)
+{	
+	char *str = ReversingString("framework");
+    TEST_ASSERT_EQUAL_STRING("krowemarf", str);
+}
+
 /*void test_ReversingString_NeedToImplement(void)
 {
     TEST_IGNORE_MESSAGE("Need to Implement ReversingString");

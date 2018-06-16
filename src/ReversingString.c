@@ -20,3 +20,21 @@ int getStringLength(char *str)
 	}
 }
 
+char *ReversingString(char *str)
+{
+	int start, end, count;
+	char *revSTR=str,temp[100];
+	static char revStr[100];
+	
+	count = getStringLength(str);
+	end = count - 1;
+	
+	for(start=0;start<count;start++)
+	{
+		temp[start] = *revSTR;
+		revStr[end] = temp[start];
+		end--;
+		revSTR++;
+	}
+	return revStr;
+}
