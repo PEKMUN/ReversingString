@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "ReversingString.h"
+#include <malloc.h>
 
 int getStringLength(char *str)
 {
 	int i=0;
 	
-	if (str==NULL || str=='\0')
+	if (str==NULL || *str=='\0')
 	{
 		return 0;
 	}
@@ -24,7 +25,8 @@ char *ReversingString(char *str)
 {
 	int start, end, count;
 	char *revSTR=str,temp[100];
-	static char revStr[100];
+	char *revStr;
+	revStr = malloc(256); 
 	
 	count = getStringLength(str);
 	end = count - 1;
@@ -36,5 +38,7 @@ char *ReversingString(char *str)
 		end--;
 		revSTR++;
 	}
+	revStr[count] = '\0';
 	return revStr;
+	free(revStr);
 }

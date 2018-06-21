@@ -41,6 +41,12 @@ void test_ReversingString_given_framework_expect_krowemarf(void)
     TEST_ASSERT_EQUAL_STRING("krowemarf", str);
 }
 
+void test_ReversingString_given_51842_expect_24815(void)
+{	
+	char *str = ReversingString("51842");
+    TEST_ASSERT_EQUAL_STRING("24815", str);
+}
+
 /*void test_ReversingString_NeedToImplement(void)
 {
     TEST_IGNORE_MESSAGE("Need to Implement ReversingString");
